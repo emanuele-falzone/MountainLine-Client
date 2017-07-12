@@ -1,0 +1,18 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);">
+        <div class="panel-title text-center">Task Details</div>
+    </div>
+
+    <div class="panel-body">
+
+          <dl class="dl-horizontal" data-bind="if: item">
+                  <dt>Type</dt>
+                  <dd data-bind="text: item()['type']"></dd>
+          </dl>
+          <div class="btn-group-vertical">
+              <a class="col-xs-2 btn btn-warning" data-bind="click: trigger.bind($data, 'task-statistics')">Statistics</a>
+              <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'task-start-session')">Start Session</a>
+          </div>
+
+    </div>
+</div>

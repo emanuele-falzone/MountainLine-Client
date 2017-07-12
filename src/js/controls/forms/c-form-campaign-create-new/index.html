@@ -1,0 +1,41 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">New Campaign</div>
+    </div>
+
+    <div class="panel-body">
+
+        <form>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Annotation Replica']}">
+                <label for="form-campaign-create-new_field_0" data-bind="css: {active: fields()['Annotation Replica']}, attr: {'data-error': errors()['Annotation Replica']}" class="control-label">Annotation Replica</label>
+                <input id="form-campaign-create-new_field_0" data-bind="value: fields()['Annotation Replica']" type="text" class="form-control validate" aria-describedby="form-campaign-create-new_field_0_error">
+                <span id="form-campaign-create-new_field_0_error" class="help-block" data-bind="text: errors()['Annotation Replica']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Annotation Size']}">
+                <label for="form-campaign-create-new_field_1" data-bind="css: {active: fields()['Annotation Size']}, attr: {'data-error': errors()['Annotation Size']}" class="control-label">Annotation Size</label>
+                <input id="form-campaign-create-new_field_1" data-bind="value: fields()['Annotation Size']" type="text" class="form-control validate" aria-describedby="form-campaign-create-new_field_1_error">
+                <span id="form-campaign-create-new_field_1_error" class="help-block" data-bind="text: errors()['Annotation Size']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Name']}">
+                <label for="form-campaign-create-new_field_2" data-bind="css: {active: fields()['Name']}, attr: {'data-error': errors()['Name']}" class="control-label">Name</label>
+                <input id="form-campaign-create-new_field_2" data-bind="value: fields()['Name']" type="text" class="form-control validate" aria-describedby="form-campaign-create-new_field_2_error">
+                <span id="form-campaign-create-new_field_2_error" class="help-block" data-bind="text: errors()['Name']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Selection Replica']}">
+                <label for="form-campaign-create-new_field_3" data-bind="css: {active: fields()['Selection Replica']}, attr: {'data-error': errors()['Selection Replica']}" class="control-label">Selection Replica</label>
+                <input id="form-campaign-create-new_field_3" data-bind="value: fields()['Selection Replica']" type="text" class="form-control validate" aria-describedby="form-campaign-create-new_field_3_error">
+                <span id="form-campaign-create-new_field_3_error" class="help-block" data-bind="text: errors()['Selection Replica']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Threshold']}">
+                <label for="form-campaign-create-new_field_4" data-bind="css: {active: fields()['Threshold']}, attr: {'data-error': errors()['Threshold']}" class="control-label">Threshold</label>
+                <input id="form-campaign-create-new_field_4" data-bind="value: fields()['Threshold']" type="text" class="form-control validate" aria-describedby="form-campaign-create-new_field_4_error">
+                <span id="form-campaign-create-new_field_4_error" class="help-block" data-bind="text: errors()['Threshold']"></span>
+            </div>
+        </form>
+        <div class="row">
+            <a class="col-xs-2 btn btn-success" data-bind="click: trigger.bind($data, 'campaign-create-new-form-intent')">Create New Campaign</a>
+        </div>
+
+
+    </div>
+</div>

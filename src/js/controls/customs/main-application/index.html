@@ -1,0 +1,86 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#landmark-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="landmark-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li data-bind="click: landmark.bind($data,'view-container-register'), css: {active: active() === 'view-container-register'}"><a>Register</a></li>
+                <li data-bind="click: landmark.bind($data,'view-container-login'), css: {active: active() === 'view-container-login'}"><a>Login</a></li>
+                <li data-bind="click: landmark.bind($data,'view-container-profile'), css: {active: active() === 'view-container-profile'}"><a>Profile</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <span data-bind="if: active() === 'view-component-image-annotation-statistics'">
+            <c-view-component-image-annotation-statistics params="context: context" class="container"></c-view-component-image-annotation-statistics>
+        </span>
+        <span data-bind="if: active() === 'view-container-annotation-task-instance'">
+            <c-view-container-annotation-task-instance params="context: context" class="container"></c-view-container-annotation-task-instance>
+        </span>
+        <span data-bind="if: active() === 'view-container-campaign-images'">
+            <c-view-container-campaign-images params="context: context" class="container"></c-view-container-campaign-images>
+        </span>
+        <span data-bind="if: active() === 'view-container-campaign-statistics'">
+            <c-view-container-campaign-statistics params="context: context" class="container"></c-view-container-campaign-statistics>
+        </span>
+        <span data-bind="if: active() === 'view-container-campaign-workers'">
+            <c-view-container-campaign-workers params="context: context" class="container"></c-view-container-campaign-workers>
+        </span>
+        <span data-bind="if: active() === 'view-container-dashboard-master'">
+            <c-view-container-dashboard-master params="context: context" class="container"></c-view-container-dashboard-master>
+        </span>
+        <span data-bind="if: active() === 'view-container-dashboard-worker'">
+            <c-view-container-dashboard-worker params="context: context" class="container"></c-view-container-dashboard-worker>
+        </span>
+        <span data-bind="if: active() === 'view-container-login'">
+            <c-view-container-login params="context: context" class="container"></c-view-container-login>
+        </span>
+        <span data-bind="if: active() === 'view-container-master-dashboard'">
+            <c-view-container-master-dashboard params="context: context" class="container"></c-view-container-master-dashboard>
+        </span>
+        <span data-bind="if: active() === 'view-container-new-campaign'">
+            <c-view-container-new-campaign params="context: context" class="container"></c-view-container-new-campaign>
+        </span>
+        <span data-bind="if: active() === 'view-container-profile'">
+            <c-view-container-profile params="context: context" class="container"></c-view-container-profile>
+        </span>
+        <span data-bind="if: active() === 'view-container-register'">
+            <c-view-container-register params="context: context" class="container"></c-view-container-register>
+        </span>
+        <span data-bind="if: active() === 'view-container-selection-task-instance'">
+            <c-view-container-selection-task-instance params="context: context" class="container"></c-view-container-selection-task-instance>
+        </span>
+        <span data-bind="if: active() === 'view-container-task-statistics'">
+            <c-view-container-task-statistics params="context: context" class="container"></c-view-container-task-statistics>
+        </span>
+        <span data-bind="if: active() === 'view-container-worker-dashboard'">
+            <c-view-container-worker-dashboard params="context: context" class="container"></c-view-container-worker-dashboard>
+        </span>
+        <span data-bind="if: active() === 'view-container-change-user-info'">
+            <c-view-container-change-user-info params="context: context" class="container"></c-view-container-change-user-info>
+        </span>
+        <span data-bind="if: active() === 'view-container-campaign-details'">
+            <c-view-container-campaign-details params="context: context" class="container"></c-view-container-campaign-details>
+        </span>
+        <span data-bind="if: active() === 'view-container-worker-details'">
+            <c-view-container-worker-details params="context: context" class="container"></c-view-container-worker-details>
+        </span>
+        <span data-bind="if: active() === 'view-container-image-details'">
+            <c-view-container-image-details params="context: context" class="container"></c-view-container-image-details>
+        </span>
+        <span data-bind="if: active() === 'view-component-image-selection-statistics'">
+            <c-view-component-image-selection-statistics params="context: context" class="container"></c-view-component-image-selection-statistics>
+        </span>
+        <span data-bind="if: active() === 'view-container-upload-image'">
+            <c-view-container-upload-image params="context: context" class="container"></c-view-container-upload-image>
+        </span>
+    </div>
+</div>

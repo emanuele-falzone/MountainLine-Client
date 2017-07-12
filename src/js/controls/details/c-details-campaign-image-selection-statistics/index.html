@@ -1,0 +1,15 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Selection Statistics</div>
+    </div>
+
+    <div class="panel-body">
+
+        <dl class="dl-horizontal" data-bind="if: item">
+                <dt>Accepted</dt>
+                <dd data-bind="text: item()['accepted']"></dd>
+                <dt>Rejected</dt>
+                <dd data-bind="text: item()['rejected']"></dd>
+        </dl>
+    </div>
+</div>

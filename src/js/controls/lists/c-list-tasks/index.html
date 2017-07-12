@@ -1,0 +1,22 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Task List</div>
+    </div>
+
+    <div class="panel-body">
+
+        <table class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: items">
+                <tr data-bind="click: $parent.select">
+                    <td data-bind="text: $data['type']" style="white-space: pre-wrap;"></td>
+                </tr>
+            </li>
+            </tbody>
+        </table>
+    </div>
+</div>

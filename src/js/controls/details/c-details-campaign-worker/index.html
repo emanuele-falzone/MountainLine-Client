@@ -1,0 +1,25 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);">
+        <div class="panel-title text-center">Worker Details</div>
+    </div>
+
+    <div class="panel-body">
+
+        <dl class="dl-horizontal" data-bind="if: item">
+                <dt>Annotator</dt>
+                <dd data-bind="text: item()['annotator']"></dd>
+                <dt>Name</dt>
+                <dd data-bind="text: item()['fullname']"></dd>
+                <dt>Selector</dt>
+                <dd data-bind="text: item()['selector']"></dd>
+        </dl>
+
+        <div class="btn-group-vertical">
+            <a class="col-xs-8 btn btn-success" data-bind="click: trigger.bind($data, 'campaign-worker-enable-selection')">Enable Selection</a>
+            <a class="col-xs-8 btn btn-success" data-bind="click: trigger.bind($data, 'campaign-worker-enable-annotation')">Enable Annotation</a>
+            <a class="col-xs-8 btn btn-danger" data-bind="click: trigger.bind($data, 'campaign-worker-disable-selection')">Disable Selection</a>
+            <a class="col-xs-8 btn btn-danger" data-bind="click: trigger.bind($data, 'campaign-worker-disable-annotation')">Disable Annotation</a>
+        </div>
+
+    </div>
+</div>

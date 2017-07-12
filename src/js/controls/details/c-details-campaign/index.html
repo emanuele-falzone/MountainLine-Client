@@ -1,0 +1,26 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Campaign Details</div>
+    </div>
+
+    <div class="panel-body">
+
+        <dl class="dl-horizontal" data-bind="if: item">
+                <dt>Annotation Replica</dt>
+                <dd data-bind="text: item()['annotation_replica']"></dd>
+                <dt>Annotation Size</dt>
+                <dd data-bind="text: item()['annotation_size']"></dd>
+                <dt>Selection Replica</dt>
+                <dd data-bind="text: item()['selection_replica']"></dd>
+                <dt>Threshold</dt>
+                <dd data-bind="text: item()['threshold']"></dd>
+        </dl>
+        <div class="btn-group-vertical">
+            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-manage-workers')">Manage Workers</a>
+            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-statistics')">Statistics</a>
+            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-upload-image-intent')">Upload New Image</a>
+            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-edit-details-intent')">Edit Details</a>
+            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-images-intent')">Show Images</a>
+        </div>
+    </div>
+</div>

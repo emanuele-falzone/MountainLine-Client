@@ -1,0 +1,16 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Image Details</div>
+    </div>
+
+    <div class="panel-body">
+
+        <dl class="dl-horizontal" data-bind="if: item">
+            <img class="img-thumbnail"  data-bind="attr : { src: 'http://awt.westus.cloudapp.azure.com' + item()['canonical']}" height="500px" width="500px" />
+        </dl>
+        <div class="btn-group-vertical">
+            <a class="col-xs-2 btn btn-warning" data-bind="click: trigger.bind($data, 'campaign-image-statistics-selection')">Selection Statistics</a>
+            <a class="col-xs-2 btn btn-info" data-bind="click: trigger.bind($data, 'campaign-image-statistics-annotation')">Annotation Statistics</a>
+        </div>
+    </div>
+</div>

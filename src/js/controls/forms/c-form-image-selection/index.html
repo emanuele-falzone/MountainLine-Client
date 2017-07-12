@@ -1,0 +1,41 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Image Selection</div>
+    </div>
+
+    <div class="panel-body">
+        <form>
+            <img class="img-thumbnail" data-bind="attr : { src: imgSrc()}" height="500px" width="500px" />
+            <div class="form-group hidden" data-bind="css: {'has-error': errors()['image']}">
+
+                <label for="form-image-selection_field_0" data-bind="css: {active: fields()['image']}, attr: {'data-error': errors()['image']}" class="control-label">image</label>
+                <input id="form-image-selection_field_0" data-bind="value: fields()['image']" type="text" class="form-control validate" aria-describedby="form-image-selection_field_0_error">
+                <span id="form-image-selection_field_0_error" class="help-block" data-bind="text: errors()['image']"></span>
+            </div>
+            <div class="form-group checkbox hidden" data-bind="css: {'has-error': errors()['selected']}">
+                <label for="form-image-selection_field_1" data-bind="css: {active: fields()['selected']}, attr: {'data-error': errors()['selected']}" class="control-label">Accepted?</label>
+                <input id="form-image-selection_field_1" data-bind="value: fields()['selected']" type="checkbox">
+                <span id="form-image-selection_field_1_error" class="help-block" data-bind="text: errors()['selected']"></span>
+            </div>
+            <div class="form-group hidden" data-bind="css: {'has-error': errors()['session']}">
+                <label for="form-image-selection_field_2" data-bind="css: {active: fields()['session']}, attr: {'data-error': errors()['session']}" class="control-label">session</label>
+                <input id="form-image-selection_field_2" data-bind="value: fields()['session']" type="text" class="form-control validate" aria-describedby="form-image-selection_field_2_error">
+                <span id="form-image-selection_field_2_error" class="help-block" data-bind="text: errors()['session']"></span>
+            </div>
+            <div class="form-group hidden" data-bind="css: {'has-error': errors()['size']}">
+                <label for="form-image-selection_field_3" data-bind="css: {active: fields()['size']}, attr: {'data-error': errors()['size']}" class="control-label">size</label>
+                <input id="form-image-selection_field_3" data-bind="value: fields()['size']" type="text" class="form-control validate" aria-describedby="form-image-selection_field_3_error">
+                <span id="form-image-selection_field_3_error" class="help-block" data-bind="text: errors()['size']"></span>
+            </div>
+            <div class="form-group hidden" data-bind="css: {'has-error': errors()['type']}">
+                <label for="form-image-selection_field_4" data-bind="css: {active: fields()['type']}, attr: {'data-error': errors()['type']}" class="control-label">type</label>
+                <input id="form-image-selection_field_4" data-bind="value: fields()['type']" type="text" class="form-control validate" aria-describedby="form-image-selection_field_4_error">
+                <span id="form-image-selection_field_4_error" class="help-block" data-bind="text: errors()['type']"></span>
+            </div>
+        </form>
+        <div class="btn-group-vertical">
+            <a class="col-xs-4 btn btn-primary" data-bind="click: trigger.bind($data, 'selection-accept')">Accept</a>
+            <a class="col-xs-4 btn btn-primary" data-bind="click: trigger.bind($data, 'selection-reject')">Reject</a>
+          </div>
+    </div>
+</div>

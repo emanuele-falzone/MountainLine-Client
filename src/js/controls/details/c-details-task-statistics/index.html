@@ -1,0 +1,21 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);">
+        <div class="panel-title text-center">Task Statistics</div>
+    </div>
+
+        <dl class="dl-horizontal" data-bind="if: selection">
+                <dt>Available</dt>
+                <dd data-bind="text: item()['available']"></dd>
+                <dt>Accepted</dt>
+                <dd data-bind="text: item()['accepted']"></dd>
+                <dt>Rejected</dt>
+                <dd data-bind="text: item()['rejected']"></dd>
+        </dl>
+        <dl class="dl-horizontal" data-bind="if: annotation">
+                <dt>Available</dt>
+                <dd data-bind="text: item()['available']"></dd>
+                <dt>Annotated</dt>
+                <dd data-bind="text: item()['annotated']"></dd>
+        </dl>
+    </div>
+</div>

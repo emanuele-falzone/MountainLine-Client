@@ -1,0 +1,27 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Workers</div>
+    </div>
+
+    <div class="panel-body">
+
+        <table class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Annotator</th>
+                    <th>Selector</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: items">
+                <tr data-bind="click: $parent.select">
+                    <td data-bind="text: $data['fullname']" style="white-space: pre-wrap;"></td>
+                    <td data-bind="text: $data['annotator']" style="white-space: pre-wrap;"></td>
+                    <td data-bind="text: $data['selector']" style="white-space: pre-wrap;"></td>
+                </tr>
+            </li>
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">Change Info</div>
+    </div>
+
+    <div class="panel-body">
+
+        <form>
+
+            <div class="form-group" data-bind="css: {'has-error': errors()['Fullname']}">
+                <label for="form-user-change-info_field_1" data-bind="css: {active: fields()['Fullname']}, attr: {'data-error': errors()['Fullname']}" class="control-label">Fullname</label>
+                <input id="form-user-change-info_field_1" data-bind="value: fields()['Fullname']" type="text" class="form-control validate" aria-describedby="form-user-change-info_field_1_error">
+                <span id="form-user-change-info_field_1_error" class="help-block" data-bind="text: errors()['Fullname']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Password']}">
+                <label for="form-user-change-info_field_2" data-bind="css: {active: fields()['Password']}, attr: {'data-error': errors()['Password']}" class="control-label">Password</label>
+                <input id="form-user-change-info_field_2" data-bind="value: fields()['Password']" type="password" class="form-control validate" aria-describedby="form-user-change-info_field_2_error">
+                <span id="form-user-change-info_field_2_error" class="help-block" data-bind="text: errors()['Password']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['Password']}">
+                <label for="form-user-change-info_field_0" data-bind="css: {active: fields()['Confirm Password']}, attr: {'data-error': errors()['Confirm Password']}" class="control-label">Confirm Password</label>
+                <input id="form-user-change-info_field_0" data-bind="value: fields()['Confirm Password']" type="password" class="form-control validate" aria-describedby="form-user-change-info_field_0_error">
+                <span id="form-user-change-info_field_0_error" class="help-block" data-bind="text: errors()['Password']"></span>
+            </div>
+        </form>
+        <div class="row">
+            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'user-change-info-form-intent')">Change Fullname</a>
+          </div>
+    </div>
+</div>

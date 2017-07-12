@@ -1,0 +1,25 @@
+<div class="panel panel-default" style="background-color:rgba(255,255,255,0.5);">
+    <div class="panel-heading" style="background-color:rgb(255,255,255);";>
+        <div class="panel-title text-center">File Selection</div>
+    </div>
+
+    <div class="panel-body">
+
+        <form>
+            <div class="form-group hidden" data-bind="css: {'has-error': errors()['campaign_images_url']}">
+                <label for="form-image-upload_field_0" data-bind="css: {active: fields()['campaign_images_url']}, attr: {'data-error': errors()['campaign_images_url']}" class="control-label">campaign_images_url</label>
+                <input id="form-image-upload_field_0" data-bind="value: fields()['campaign_images_url']" type="text" class="form-control validate" aria-describedby="form-image-upload_field_0_error">
+                <span id="form-image-upload_field_0_error" class="help-block" data-bind="text: errors()['campaign_images_url']"></span>
+            </div>
+            <div class="form-group" data-bind="css: {'has-error': errors()['file_name']}">
+                <label for="form-image-upload_field_1" data-bind="css: {active: fields()['file_name']}, attr: {'data-error': errors()['file_name']}" class="control-label">File Name</label>
+                <input id="form-image-upload_field_1" data-bind="value: fields()['file_name']" type="file" class="form-control validate" aria-describedby="form-image-upload_field_1_error">
+                <span id="form-image-upload_field_1_error" class="help-block" data-bind="text: errors()['file_name']"></span>
+            </div>
+        </form>
+        <div class="row">
+            <a class="col-xs-2 btn btn-info" data-bind="click: trigger.bind($data, 'campaign-upload-image-form-intent')">Upload</a>
+        </div>
+
+    </div>
+</div>
