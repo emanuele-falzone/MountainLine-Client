@@ -8,6 +8,6 @@ var server = express();
 //server.use('/api', require('./server').createRouter());
 server.use(express["static"]('www', {index: 'index.html'}));
 
-server.listen(3000, function () {
-    console.log("Server listening on port 3000");
+server.listen(80, function () {
+    console.log("Server listening on port 80");
 });
