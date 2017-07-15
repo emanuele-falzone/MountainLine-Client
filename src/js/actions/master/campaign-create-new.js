@@ -28,7 +28,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .then(function (result) {
 
-            $.notify({message: 'Campaign Created'}, {allow_dismiss: true, type: 'success'});
+            $.notify({message: 'Campaign Created!'}, {allow_dismiss: true, type: 'success'});
 
             solve({
                 event: 'campaign-create-new-done', // New Campaign Created
@@ -40,7 +40,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
             var eo = JSON.parse(e);
 
-            $.notify({message: 'Error while creating the campaign!'}, {allow_dismiss: true, type: 'danger'});
+            //$.notify({message: 'Error while creating the campaign!'}, {allow_dismiss: true, type: 'danger'});
 
             solve({
                 event: 'campaign-create-error', // campaign-create-error

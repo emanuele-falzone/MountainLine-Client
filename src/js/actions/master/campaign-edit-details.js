@@ -40,7 +40,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
             var eo = JSON.parse(e);
 
-            $.notify({message: 'Error while editing the campaign!'}, {allow_dismiss: true, type: 'danger'});
+            //$.notify({message: 'You ca editing the campaign!'}, {allow_dismiss: true, type: 'danger'});
 
             solve({
                 event: 'campaign-edit-error', // campaign-edit-error

@@ -16,7 +16,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .then(function (result) {
 
-            $.notify({message: 'Annotation Disabled'}, {allow_dismiss: true, type: 'success'});
+            $.notify({message: 'Annotation Disabled!'}, {allow_dismiss: true, type: 'success'});
 
             solve({
                 event: 'campaign-worker-annotation-disabled', // campaign-worker-annotation-disabled
@@ -26,7 +26,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .catch(function (e) {
 
-            $.notify({message: 'Error while disabling annotation!'}, {allow_dismiss: true, type: 'danger'});
+            $.notify({message: 'You can\'t disable annotation!'}, {allow_dismiss: true, type: 'warning'});
         });
 
 };

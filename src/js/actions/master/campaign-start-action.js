@@ -16,7 +16,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .then(function (result) {
 
-            $.notify({message: 'Campaign Started'}, {allow_dismiss: true, type: 'success'});
+            $.notify({message: 'Campaign Started!'}, {allow_dismiss: true, type: 'success'});
 
             solve({
                 event: 'campaign-started', // campaign-started
@@ -26,7 +26,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .catch(function (e) {
 
-            $.notify({message: 'Error while starting campaign!'}, {allow_dismiss: true, type: 'danger'});
+            $.notify({message: 'You can\'t start this campaign!'}, {allow_dismiss: true, type: 'warning'});
         });
 };
 

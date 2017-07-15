@@ -36,7 +36,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
             var eo = JSON.parse(e);
 
-            $.notify({message: 'Registraion Failed!'}, {allow_dismiss: true, type: 'success'});
+            $.notify({message: 'Registraion Failed!'}, {allow_dismiss: true, type: 'danger'});
 
             solve({
                 event: 'user-registration-error', // user-registration-error

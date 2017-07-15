@@ -23,7 +23,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
                 .then(function (result) {
 
-                    $.notify({message: 'Next Loaded'}, {allow_dismiss: true, type: 'success'});
+                    $.notify({message: 'Next Selection Loaded'}, {allow_dismiss: true, type: 'success'});
 
                     result['session'] = parameters['session'];
 
@@ -36,7 +36,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
                 .catch(function (e) {
 
-                    $.notify({message: 'Session Finished'}, {allow_dismiss: true, type: 'success'});
+                    $.notify({message: 'Session Finished'}, {allow_dismiss: true, type: 'warning'});
 
                     solve({
                         event: 'task-session-selection-finished', // Finished
@@ -49,7 +49,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
         })
         .catch(function (e) {
 
-            $.notify({message: 'Session Finished'}, {allow_dismiss: true, type: 'success'});
+            $.notify({message: 'Session Finished'}, {allow_dismiss: true, type: 'info'});
 
             solve({
                 event: 'task-session-selection-finished', // Finished

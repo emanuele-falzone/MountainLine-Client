@@ -26,7 +26,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
     .catch(function (e) {
 
-        $.notify({message: 'Error while enabling annotation!'}, {allow_dismiss: true, type: 'danger'});
+        $.notify({message: 'You can\'t enable annotation!'}, {allow_dismiss: true, type: 'warning'});
     });
 };
 

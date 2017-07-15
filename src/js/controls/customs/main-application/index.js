@@ -22,8 +22,20 @@ exports.register = function () {
                     self.context.vms[defaultChild].init();
                 }
             };
+            self.trigger = function (id) {
+                self.context.events[id](self.context, self.output);
+            };
 
             self.context.top = self;
+            this.logged  = ko.computed(function() {
+                console.log(self.context.manager._APIToken()!=null);
+                return self.context.manager._APIToken()!=null;
+            }, this);
+            this.notLogged  = ko.computed(function() {
+                console.log(self.context.manager._APIToken()==null);
+                return self.context.manager._APIToken()==null;
+            }, this);
+
         },
         template: require('./index.html'),
         synchronous: true

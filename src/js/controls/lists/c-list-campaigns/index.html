@@ -19,8 +19,14 @@
                     <td data-bind="text: $data['name']" style="white-space: pre-wrap;"></td>
                     <td data-bind="text: $data['status']" style="white-space: pre-wrap;"></td>
                     <td>
-                        <a class="waves-effect waves-light btn btn-success" data-bind="click: $parent.trigger.bind($data, 'campaign-start'), clickBubble: false">Start</a>
-                        <a class="waves-effect waves-light btn btn-danger" data-bind="click: $parent.trigger.bind($data, 'campaign-terminate'), clickBubble: false">Terminate</a>
+                        <div data-bind="if : $data['status']=='ready'">
+                            <a class="waves-effect waves-light btn-sm btn-success" data-bind="click: $parent.trigger.bind($data, 'campaign-start'), clickBubble: false">Start</a>
+                        </div>
+
+                        <div data-bind="if : $data['status']=='started'">
+                            <a class="waves-effect waves-light btn-sm btn-danger" data-bind="click: $parent.trigger.bind($data, 'campaign-terminate'), clickBubble: false">Terminate</a>
+                        </div>
+
                     </td>
                 </tr>
             </li>

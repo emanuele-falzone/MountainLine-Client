@@ -84,7 +84,7 @@ exports.register = function(options){
 
   ko.components.register('line-drawer', {
       viewModel: ViewModel,
-      template: '<img data-bind="attr: { src: src() }, LineDrawNaturalSize: naturalSize" class="background" draggable="false"/><canvas id="mycanvas" data-bind="LineDraw: line(), LineDrawSetSize: naturalSize, LineDrawPen: pen()"></canvas>'
+      template: '<img width="500px" data-bind="attr: { src: src() }, LineDrawNaturalSize: naturalSize" class="background" draggable="false"/><canvas id="mycanvas" data-bind="LineDraw: line(), LineDrawSetSize: naturalSize, LineDrawPen: pen()"></canvas>'
   });
 
 };

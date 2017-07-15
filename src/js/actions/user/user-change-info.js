@@ -35,7 +35,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
                   var eo = JSON.parse(e);
 
-                  $.notify({message: 'Error changing infos!'}, {allow_dismiss: true, type: 'danger'});
+                  //$.notify({message: 'Error changing infos!'}, {allow_dismiss: true, type: 'danger'});
 
                   solve({
                       event: 'user-change-info-error', // user-change-info-error

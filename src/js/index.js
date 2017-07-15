@@ -19,6 +19,7 @@ function ApplicationViewModel() {
     var manager = new caller.Manager();
     var repos = repositories.createRepositories({manager : manager});
     this.context = {
+        manager : manager,
         repositories: repos,
         events: events.createEvents({manager : manager}),
         actions: actions.createActions({repositories: repos}),

@@ -16,11 +16,15 @@
                 <dd data-bind="text: item()['threshold']"></dd>
         </dl>
         <div class="btn-group-vertical">
-            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-manage-workers')">Manage Workers</a>
             <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-statistics')">Statistics</a>
-            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-upload-image-intent')">Upload New Image</a>
-            <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-edit-details-intent')">Edit Details</a>
             <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-images-intent')">Show Images</a>
+        </div>
+        <div data-bind="if: item">
+            <div class="btn-group-vertical" data-bind="if: item()['status'] == 'ready'">
+                <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-manage-workers')">Manage Workers</a>
+                <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-upload-image-intent')">Upload New Image</a>
+                <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data, 'campaign-edit-details-intent')">Edit Details</a>
+            </div>
         </div>
     </div>
 </div>

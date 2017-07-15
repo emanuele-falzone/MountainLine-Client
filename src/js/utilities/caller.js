@@ -1,10 +1,12 @@
+var ko = require('knockout');
 
 function Manager(){
 
     this._APIKey = '4ce5200c-5283-4591-9710-e4427efbc514';
+    this._APIToken = ko.observable(null);
 
     var _Request = function(APIKey, APIToken){
-      this._server = "http://awt.westus.cloudapp.azure.com";
+      this._server = "http://localhost:4000";
       this._APIKey = APIKey;
       this._APIToken = APIToken;
 
@@ -65,6 +67,7 @@ function Manager(){
         return new Promise(function (resolve, reject) {
           $.ajax(self._parameters)
             .done(function (result) {
+              console.log(result);
               if(index){
                 resolve(result[index]);
               }else{
@@ -72,6 +75,7 @@ function Manager(){
               }
             })
             .fail(function (jqXHR, textStatus, errorThrown) {
+              console.log(jqXHR.responseText);
               /*
               console.log(jqXHR);
               console.log(textStatus);
@@ -89,16 +93,16 @@ function Manager(){
     };
 
     this.setAPIToken = function(APIToken) {
-      this._APIToken = APIToken;
+      this._APIToken(APIToken);
       console.log("APIToken " + APIToken);
     };
 
     this.getAPIToken = function(){
-      return this._APIToken;
+      return this._APIToken();
     };
 
     this.getRequest = function(){
-      return new _Request(this._APIKey, this._APIToken);
+      return new _Request(this._APIKey, this._APIToken());
     };
 
 };

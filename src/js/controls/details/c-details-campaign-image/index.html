@@ -6,7 +6,7 @@
     <div class="panel-body">
 
         <dl class="dl-horizontal" data-bind="if: item">
-            <img class="img-thumbnail"  data-bind="attr : { src: 'http://awt.westus.cloudapp.azure.com' + item()['canonical']}" height="500px" width="500px" />
+            <img class="img-thumbnail"  data-bind="attr : { src: 'http://localhost:4000' + item()['canonical']}" height="500px" width="500px" />
         </dl>
         <div class="btn-group-vertical">
             <a class="col-xs-2 btn btn-warning" data-bind="click: trigger.bind($data, 'campaign-image-statistics-selection')">Selection Statistics</a>

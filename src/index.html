@@ -18,8 +18,8 @@
     }
 
     line-drawer > img.background {
-        max-width: 100%;
-        min-width: 100%;
+        max-width: 500px;
+        min-width: 500px;
     }
 
     line-drawer > canvas {
@@ -42,8 +42,11 @@
     </style>
   </head>
   <body>
-
-    <main-application class="flow-text" params="context: context"></main-application>
+    <div style="width:100%;">
+        <div style="width:70%; margin: 0 auto">
+            <main-application class="flow-text" params="context: context"></main-application>
+        </div>
+    </div>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <!-- TODO: Remove to use a different UI framework BEGIN -->
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>

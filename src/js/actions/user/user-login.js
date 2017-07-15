@@ -32,7 +32,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
             var eo = JSON.parse(e);
 
-            $.notify({message: 'Login Failed!'}, {allow_dismiss: true, type: 'success'});
+            $.notify({message: 'Login Failed!'}, {allow_dismiss: true, type: 'danger'});
 
             solve({
                 event: 'user-login-error', // user-login-error

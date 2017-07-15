@@ -26,7 +26,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .catch(function (e) {
 
-            $.notify({message: 'Error while enabling selection!'}, {allow_dismiss: true, type: 'danger'});
+            $.notify({message: 'You can\'t enable selection!'}, {allow_dismiss: true, type: 'warning'});
         });
 
 };

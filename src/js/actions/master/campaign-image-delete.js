@@ -26,7 +26,7 @@ Action.prototype.run = function (parameters, solve) { // add "onCancel" paramete
 
         .catch(function (e) {
 
-            $.notify({message: 'error while deleting image!'}, {allow_dismiss: true, type: 'danger'});
+            $.notify({message: 'You can\'t delete this image!'}, {allow_dismiss: true, type: 'danger'});
         });
 };
 

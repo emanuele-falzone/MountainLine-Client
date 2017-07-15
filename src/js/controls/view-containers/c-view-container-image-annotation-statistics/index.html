@@ -1,7 +1,14 @@
 <span>
     <!-- Image Statistics -->
-    <c-list-campaign-image-statitics params="context: context"></c-list-campaign-image-statitics>
+    <div class="row">
+        <c-list-campaign-image-statitics  class="col-md-2" params="context: context"></c-list-campaign-image-statitics>
+    </div>
     <!-- Image Details -->
-    <c-details-campaign-image-annotation-statistics params="context: context"></c-details-campaign-image-annotation-statistics>
+    <div class="row">
+    <c-details-campaign-image-annotation-statistics  class="col-md-6" params="context: context"></c-details-campaign-image-annotation-statistics>
+</div>
+
+    <div class="row">
     <a class="col-xs-2 btn btn-primary" data-bind="click: trigger.bind($data,'back-to-campaign-image-details')">Back</a>
+    </div>
 </span>
