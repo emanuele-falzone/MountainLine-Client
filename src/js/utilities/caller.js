@@ -6,7 +6,7 @@ function Manager(){
     this._APIToken = ko.observable(null);
 
     var _Request = function(APIKey, APIToken){
-      this._server = "http://localhost:4000";
+      this._server = "http://awt.westus.cloudapp.azure.com:4000";
       this._APIKey = APIKey;
       this._APIToken = APIToken;
 

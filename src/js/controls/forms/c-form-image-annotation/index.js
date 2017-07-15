@@ -38,7 +38,7 @@ function ViewModel(params) {
     };
     this.imgSrc  = ko.computed(function() {
         if (self.fields() && isFunction(self.fields().image)){
-        return 'http://localhost:4000' + self.fields().image();
+        return 'http://awt.westus.cloudapp.azure.com:4000' + self.fields().image();
       }
       else{
         return "error.png";
